@@ -1,18 +1,27 @@
 package com.home.client;
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInput;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutput;
+import java.io.ObjectOutputStream;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
 import com.home.singleton.SingletonDestroyUsingReflection;
+import com.home.singleton.SingletonDistributedUsingSerialization;
 import com.home.singleton.SingletonUsingEnum;
 import com.home.singleton.SingletonWithBillPugh;
+import com.home.singleton.SingletonPreventionWithClone;
 import com.home.singleton.SingletonWithEagerLazy;
 import com.home.singleton.SingletonWithLazyInitialization;
 import com.home.singleton.SingletonWithStaticInstantiation;
 
 public class Client {
 	
-	public static void main(String[] args) throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+	public static void main(String[] args) throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, IOException, CloneNotSupportedException {
 		
 		System.out.println("Singleton with EagerLazy Approach");
 		SingletonWithEagerLazy eagerLazy=SingletonWithEagerLazy.getInstance();
@@ -59,6 +68,46 @@ public class Client {
 		System.out.println(enum2.hashCode());
 		String welcome = enum1.welcome();
 		System.out.println(welcome);
+		
+		System.out.println("Singleton using Serializable");
+		ObjectOutput objectOutput=null;
+		SingletonDistributedUsingSerialization serialization=SingletonDistributedUsingSerialization.getInstance();
+		try {
+			objectOutput=new ObjectOutputStream(new FileOutputStream("abc.ser"));
+			objectOutput.writeObject(serialization);
+			objectOutput.flush();
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		finally {
+			if (objectOutput!= null)
+				objectOutput.close();
+		}
+		
+		ObjectInput objectInput=null;
+		SingletonDistributedUsingSerialization serialization2=null;
+		try {
+			objectInput= new ObjectInputStream(new FileInputStream("abc.ser"));
+			Object readObject = objectInput.readObject();
+			serialization2=(SingletonDistributedUsingSerialization)readObject;
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		finally {
+			if(objectInput != null)
+				objectInput.close();
+		}
+		
+		System.out.println(serialization.hashCode());
+		System.out.println(serialization2.hashCode());
+		
+		System.out.println("Singleton using clone");
+		SingletonPreventionWithClone withClone=SingletonPreventionWithClone.getInstance();
+		SingletonPreventionWithClone withClone2=(SingletonPreventionWithClone) withClone.clone();
+		System.out.println(withClone.hashCode());
+		System.out.println(withClone2.hashCode());
 	}
 
 }
