@@ -19,7 +19,7 @@ import com.home.singleton.SingletonWithEagerLazy;
 import com.home.singleton.SingletonWithLazyInitialization;
 import com.home.singleton.SingletonWithStaticInstantiation;
 
-public class Client {
+public class SingletonClient {
 	
 	public static void main(String[] args) throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, IOException, CloneNotSupportedException {
 		

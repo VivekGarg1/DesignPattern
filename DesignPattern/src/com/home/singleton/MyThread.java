@@ -1,6 +1,4 @@
-package com.home.thread;
-
-import com.home.singleton.SingletonWithThreadSafe;
+package com.home.singleton;
 
 public class MyThread implements Runnable {
 
