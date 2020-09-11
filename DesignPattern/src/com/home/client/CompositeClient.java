@@ -1,9 +1,9 @@
 package com.home.client;
 
-import com.home.composite.AdminServiceLeaf;
-import com.home.composite.EmployeeServiceLeaf;
-import com.home.composite.Service;
-import com.home.composite.ServiceProvider;
+import com.home.structural.composite.AdminServiceLeaf;
+import com.home.structural.composite.EmployeeServiceLeaf;
+import com.home.structural.composite.Service;
+import com.home.structural.composite.ServiceProvider;
 
 public class CompositeClient {
 	

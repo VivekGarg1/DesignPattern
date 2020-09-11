@@ -10,14 +10,14 @@ import java.io.ObjectOutputStream;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
-import com.home.singleton.SingletonDestroyUsingReflection;
-import com.home.singleton.SingletonDistributedUsingSerialization;
-import com.home.singleton.SingletonUsingEnum;
-import com.home.singleton.SingletonWithBillPugh;
-import com.home.singleton.SingletonPreventionWithClone;
-import com.home.singleton.SingletonWithEagerLazy;
-import com.home.singleton.SingletonWithLazyInitialization;
-import com.home.singleton.SingletonWithStaticInstantiation;
+import com.home.creational.singleton.SingletonDestroyUsingReflection;
+import com.home.creational.singleton.SingletonDistributedUsingSerialization;
+import com.home.creational.singleton.SingletonPreventionWithClone;
+import com.home.creational.singleton.SingletonUsingEnum;
+import com.home.creational.singleton.SingletonWithBillPugh;
+import com.home.creational.singleton.SingletonWithEagerLazy;
+import com.home.creational.singleton.SingletonWithLazyInitialization;
+import com.home.creational.singleton.SingletonWithStaticInstantiation;
 
 public class SingletonClient {
 	

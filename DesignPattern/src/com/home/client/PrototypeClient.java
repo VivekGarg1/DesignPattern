@@ -2,8 +2,8 @@ package com.home.client;
 
 import java.util.List;
 
-import com.home.prototype.Student;
-import com.home.prototype.StudentDao;
+import com.home.creational.prototype.Student;
+import com.home.creational.prototype.StudentDao;
 
 public class PrototypeClient {
 

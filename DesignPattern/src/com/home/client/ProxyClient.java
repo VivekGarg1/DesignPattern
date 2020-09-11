@@ -1,7 +1,7 @@
 package com.home.client;
 
-import com.home.proxy.VeryExpensiveProcess;
-import com.home.proxy.VeryExpensiveProcessProxy;
+import com.home.structural.proxy.VeryExpensiveProcess;
+import com.home.structural.proxy.VeryExpensiveProcessProxy;
 
 public class ProxyClient {
 	public static void main(String[] args) {

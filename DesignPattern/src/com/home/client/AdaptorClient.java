@@ -1,10 +1,10 @@
 package com.home.client;
 
-import com.home.adaptor.MobileAdaptor;
-import com.home.adaptor.MobileAdaptorImpl;
-import com.home.adaptor.Volt;
-import com.home.adaptor.WallSocket;
-import com.home.adaptor.WallSocketImpl;
+import com.home.structural.adaptor.MobileAdaptor;
+import com.home.structural.adaptor.MobileAdaptorImpl;
+import com.home.structural.adaptor.Volt;
+import com.home.structural.adaptor.WallSocket;
+import com.home.structural.adaptor.WallSocketImpl;
 
 public class AdaptorClient {
 	

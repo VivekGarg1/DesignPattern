@@ -4,7 +4,7 @@ import java.nio.FloatBuffer;
 import java.util.stream.Stream;
 import java.util.stream.Stream.Builder;
 
-import com.home.builder.Laptop;
+import com.home.creational.builder.Laptop;
 
 public class BuilderClient {
 	

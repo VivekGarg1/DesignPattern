@@ -1,8 +1,8 @@
 package com.home.client;
 
-import com.home.factory.Computer;
-import com.home.factory.ComputerFactory;
-import com.home.factory.ComputerType;
+import com.home.creational.factory.Computer;
+import com.home.creational.factory.ComputerFactory;
+import com.home.creational.factory.ComputerType;
 
 public class FactoryClient {
 

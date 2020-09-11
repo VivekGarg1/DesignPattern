@@ -4,7 +4,7 @@ package com.home.client;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import com.home.singleton.MyThread;
+import com.home.creational.singleton.MyThread;
 
 
 public class ThreadSafeClient {

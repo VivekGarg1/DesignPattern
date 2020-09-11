@@ -1,10 +1,10 @@
 package com.home.client;
 
-import com.home.abstractfactory.PCFactory;
-import com.home.abstractfactory.ServerFactory;
-import com.home.abstractfactory.Computer;
-import com.home.abstractfactory.ComputerFactory;
-import com.home.abstractfactory.LaptopFactory;
+import com.home.creational.abstractfactory.Computer;
+import com.home.creational.abstractfactory.ComputerFactory;
+import com.home.creational.abstractfactory.LaptopFactory;
+import com.home.creational.abstractfactory.PCFactory;
+import com.home.creational.abstractfactory.ServerFactory;
 
 public class AbstractFactoryClient {
 
